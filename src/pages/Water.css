@@ -1,0 +1,131 @@
+.water-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.water-main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.water-circle-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.water-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.water-circle-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.water-count {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.water-glasses {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.water-pct-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.water-controls {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.water-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.water-btn.plus {
+  background: var(--blue);
+  color: #fff;
+  font-size: 15px;
+}
+.water-btn.plus:hover {
+  background: #60a5fa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(59,130,246,0.3);
+}
+
+.water-btn.minus {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.water-btn.minus:hover {
+  background: var(--bg-card-hover);
+}
+
+.water-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tips-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .water-layout {
+    grid-template-columns: 1fr;
+  }
+}

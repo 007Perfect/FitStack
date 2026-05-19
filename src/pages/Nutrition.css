@@ -1,0 +1,76 @@
+.macro-summary { }
+
+.macro-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.macro-item {}
+
+.macro-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.macro-value {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.macro-pct {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.meal-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.meal-macros {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.macro-pill {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-weight: 500;
+}
+.macro-pill.orange { background: var(--orange-light); color: var(--orange); }
+.macro-pill.purple { background: var(--accent-glow);  color: var(--accent-light); }
+.macro-pill.green  { background: var(--green-light);  color: var(--green); }
+.macro-pill.yellow { background: var(--yellow-light); color: var(--yellow); }
+
+@media (max-width: 768px) {
+  .macro-grid { grid-template-columns: repeat(2, 1fr); }
+}
